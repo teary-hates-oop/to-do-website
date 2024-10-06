@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 :root {
-    --accent-color: #2609ca;
+    --accent-color: #0960ca;
     --base-color: white;
     --text-color: #2E2B41;
     --input-color: #F3F0FF;
@@ -20,7 +20,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url(assets\images\background-image-1.jpg);
+    background-image: url(images/background-image-1.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden;
@@ -42,7 +42,6 @@ body {
 h1 {
     font-size: 3rem;
     font-weight: 900;
-    text-transform: uppercase;
 }
 
 form {
@@ -53,4 +52,89 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--input-color);
+    border-left: none;
+    background-color: var(--input-color);
+    transition: 300ms ease;
+}
+
+form input:hover {
+    border-color: var(--accent-color);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus) > label{
+    background-color: var(--text-color)
+}
+
+form input::placeholder{
+    color: var(--text-color);
+}
+
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button:hover {
+    background-color: var(--text-color);
+
+}
+
+form button:focus {
+    outline: none;
+    background-color: var(--text-color);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: 150ms ease;
+}
+
+a:hover {
+    text-decoration: underline;
 }
