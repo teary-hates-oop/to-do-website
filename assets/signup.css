@@ -41,7 +41,7 @@ body {
 
 h1 {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 form {
@@ -95,14 +95,17 @@ form input:hover {
 form input:focus {
     outline: none;
     border-color: var(--text-color);
+    transition: 300ms ease;
 }
 
 div:has(input:focus) > label{
-    background-color: var(--text-color)
+    background-color: var(--text-color);
+    transition: 300ms ease;
 }
 
 form input::placeholder{
     color: var(--text-color);
+    transition: 300ms ease;
 }
 
 form button{
